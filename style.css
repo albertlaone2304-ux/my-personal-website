@@ -1,0 +1,217 @@
+/* =====================================================
+   COMPLETE WEBSITE STYLING – PINK & BLACK THEME
+   Grid + Flexbox + Cards + Gallery + Blog + Responsive
+===================================================== */
+
+
+/* --- 1. GENERAL STYLING & COLORS --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #000000; /* Black background */
+    margin: 0;
+    padding: 0;
+    color: #ffc0cb; /* Soft pink text */
+}
+
+
+/* --- 2. HOMEPAGE GRID LAYOUT --- */
+.page-layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Grid Areas */
+header {
+    grid-area: header;
+    background-color: #ff4da6;
+    color: #000000;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+main {
+    grid-area: main;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 77, 166, 0.3);
+}
+
+aside {
+    grid-area: aside;
+    background: #262626;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ff4da6;
+}
+
+footer {
+    grid-area: footer;
+    background: #111111;
+    color: #ff4da6;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Navigation Links */
+nav a {
+    color: #ff4da6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* --- 3. PROJECTS GRID --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+/* --- 4. GALLERY GRID --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ff4da6;
+    transition: transform 0.3s;
+}
+
+
+/* --- 5. BLOG GRID --- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* --- 6. COMMON CARD STYLING & HOVER EFFECTS --- */
+.project-card,
+.blog-post {
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ff4da6;
+    transition: transform 0.3s;
+    box-shadow: 0px 2px 8px rgba(255, 77, 166, 0.3);
+}
+
+.project-card:hover,
+.blog-post:hover,
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+
+/* --- 7. TABLES & FORMS --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #ff4da6;
+    color: #000000;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #ff99cc;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ff4da6;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+button {
+    background-color: #ff4da6;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff99cc;
+}
+
+
+/* --- 8. RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+
+    .page-layout {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

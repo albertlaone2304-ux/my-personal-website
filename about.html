@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Laone Losika Albert</title>
-     <link rel="stylesheet" href="styles.css/style.css">
+     <link rel="stylesheet" href="style.css/style.css">
 </head>
 <body>
     <header>
         <h1>About Laone Losika Albert</h1>
     </header>
-   <nav>
+   <div class="navbar">
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="menu-toggle">
+    <!-- Hamburger icon -->
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <!-- Navigation -->
+    <nav class="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
@@ -18,6 +28,8 @@
         <a href="blog.html">Blog</a>
         <a href="contacts.html">Contacts</a>
     </nav>
+</div>
+</div>
     <main>
         <section class="two-column-layout">
             <div class="sidebar">
@@ -27,8 +39,10 @@
                     <li>Web Developer</li>
                     <li>Programmer</li>
                 </ul>
-                <img src="images/profile.jpg" alt="Profile Picture" width="150">
-            </div>
+                <section class="about" id="about">
+  <div class="about-image">
+    <img src="images/Laonel.jpg.jpeg" alt="Profile">
+  </div>
             <div class="content-area">
                 <h2>My Professional Journey</h2>
           <p>My name is Laone Losika Albert, a year 1 Business Intelligence and Data Analytics student with a growing passion for machine learning, data visualization and turning raw data into meaningful insights. I enjoy exploring how tools like Excel, Power BI and Python can create powerful solutions for real-world challenges.</p>

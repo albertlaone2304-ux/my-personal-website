@@ -2,33 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Laone Losika Albert</title>
-     <link rel="stylesheet" href="styles.css/style.css">
+     <link rel="stylesheet" href="style.css/style.css">
 </head>
 <body>
 
     <header>
         <h1>My Gallery</h1>
     </header>
-    <nav>
+  <div class="navbar">
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="menu-toggle">
+    <!-- Hamburger icon -->
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <!-- Navigation -->
+    <nav class="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="gallery.html">Gallery</a>
         <a href="blog.html">Blog</a>
-        <a href="contacts.html">Contacts</a> 
+        <a href="contacts.html">Contacts</a>
     </nav>
     <main>
         <section>
             <h2>Visual Portfolio</h2>
                <div class="gallery-grid">
-                <img src="images/photo1.jpg" alt="Gallery Photo 1">
-                <img src="images/photo2.jpg" alt="Gallery Photo 2">
-                <img src="images/photo3.jpg" alt="Gallery Photo 3">
-                <img src="images/photo4.jpg" alt="Gallery Photo 4">
-                <img src="images/photo5.jpg" alt="Gallery Photo 5">
-                <img src="images/photo6.jpg" alt="Gallery Photo 6">
-            </div>
+    <img src="images/Bacll.jpg" alt="Gallery Photo 1" class="img-fluid rounded shadow-sm border">
+    <img src="images/code.jpg.jpg" alt="Gallery Photo 2" class="img-fluid rounded shadow-sm border">
+    <img src="images/bi.jfif.jfif" alt="Gallery Photo 3" class="img-fluid rounded shadow-sm border">
+    <img src="images/download (24).jfif" alt="Gallery Photo 4" class="img-fluid rounded shadow-sm border">
+    <img src="images/me.jfif.jfif" alt="Gallery Photo 5" class="img-fluid rounded shadow-sm border">
+    <img src="images/jj.jfif.jfif" alt="Gallery Photo 6" class="img-fluid rounded shadow-sm border">
+</div>
         </section>
     </main>
 
